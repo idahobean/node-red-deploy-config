@@ -1,0 +1,6 @@
+---
+applications:
+- name: node-red
+  memory: 128M
+  disk: 128M
+

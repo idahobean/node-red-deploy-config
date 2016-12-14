@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -eu
+
+unzip -d build-output node-red/node-red-*.zip 
+mv node-red-config/config/* build-output -f
+

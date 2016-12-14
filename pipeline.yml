@@ -1,0 +1,34 @@
+jobs:
+- name: deploy-node-red-with-custom-private-node
+  public: false
+  plan:
+  - aggregate:
+    - get: node-red
+    - get: node-red-config
+      trigger: true
+  - task: integrate
+    file: node-red-config/build.yml
+  - put: pcf-dev
+    params:
+      manifest: build-output/manifest.yml
+      current_app_name: node-red
+
+resources:
+- name: pcf-dev
+  type: cf-docker-resource
+  source:
+    api: https://api.local.pcfdev.io
+    username: admin
+    password: admin
+    organization: pcfdev-org
+    space: pcfdev-space
+    skip_cert_check: true
+- name: node-red
+  type: github-resource
+    source:
+      user: node-red
+      repository: node-red
+- name: node-red-config
+  type: git
+    source:
+      uri:
