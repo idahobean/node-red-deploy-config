@@ -3,6 +3,8 @@
 set -eu
 
 unzip -d integrate-output node-red/node-red-*.zip && f=(integrate-output/*) && mv integrate-output/*/* integrate-output && rmdir "${f[@]}"
+
+shopt -s dotglob
 mv node-red-config/config/* integrate-output -f
 
 find .
