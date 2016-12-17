@@ -15,7 +15,7 @@ jobs:
 
 resources:
 - name: pcf-dev
-  type: cf-docker-resource
+  type: cf
   source:
     api: https://api.local.pcfdev.io
     username: admin
