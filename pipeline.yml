@@ -24,11 +24,11 @@ resources:
     space: pcfdev-space
     skip_cert_check: true
 - name: node-red
-  type: github-resource
-    source:
-      user: node-red
-      repository: node-red
+  type: github-release
+  source:
+    user: node-red
+    repository: node-red
 - name: node-red-config
   type: git
-    source:
-      uri: https://github.com/idahobean/node-red-config
+  source:
+    uri: https://github.com/idahobean/node-red-deploy-config.git
