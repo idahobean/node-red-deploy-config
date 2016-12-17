@@ -3,7 +3,7 @@
 set -eu
 
 unzip node-red/node-red-*.zip
-mv node-red/node-red-*/* integrate-output -f
+find node-red*/* | xargs -i mv {} integrate-output -f
 mv node-red-config/config/* integrate-output -f
 
 find .
