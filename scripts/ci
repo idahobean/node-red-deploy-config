@@ -3,5 +3,5 @@
 set -eu
 
 unzip -d integrate-output node-red/node-red-*.zip
-mv node-red-config/config/* integrat-output -f
+mv node-red-config/config/* integrate-output -f
 
