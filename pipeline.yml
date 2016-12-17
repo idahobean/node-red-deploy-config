@@ -7,10 +7,10 @@ jobs:
     - get: node-red-config
       trigger: true
   - task: integrate
-    file: node-red-config/build.yml
+    file: node-red-config/integrate.yml
   - put: pcf-dev
     params:
-      manifest: build-output/manifest.yml
+      manifest: integrate-output/manifest.yml
       current_app_name: node-red
 
 resources:
@@ -31,4 +31,4 @@ resources:
 - name: node-red-config
   type: git
     source:
-      uri:
+      uri: https://github.com/idahobean/node-red-config

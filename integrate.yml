@@ -10,7 +10,7 @@ inputs:
 - name: node-red-config
 
 outputs:
-- name: build-output
+- name: integrate-output
 
 run:
   path: node-red-config/scripts/ci
