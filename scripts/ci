@@ -2,6 +2,6 @@
 
 set -eu
 
-unzip -d build-output node-red/node-red-*.zip 
-mv node-red-config/config/* build-output -f
+unzip -d integrate-output node-red/node-red-*.zip
+mv node-red-config/config/* integrat-output -f
 
