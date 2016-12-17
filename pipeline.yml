@@ -11,6 +11,7 @@ jobs:
   - put: pcf-dev
     params:
       manifest: integrate-output/manifest.yml
+      path: integrate-output
       current_app_name: node-red
 
 resources:
